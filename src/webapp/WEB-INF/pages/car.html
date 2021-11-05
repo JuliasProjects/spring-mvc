@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car list page</title>
+    <style>table th, table td{padding: 5px}</style>
+</head>
+<body>
+<h1>th:each</h1>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Power</th>
+        <th>Series</th>
+    </tr>
+
+    <tr th: th:each="car: ${list}">
+        <td>th:utext="${car.name()}"</td>
+        <td>th:utext="${car.power()}"</td>
+        <td>th:utext="${car.color()}"</td>
+    </tr>
+
+</table>
+</body>
+</html>
